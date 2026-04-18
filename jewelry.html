@@ -1,14 +1,184 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Jewelry | Bee</title>
+    <title>Bee Jewelry</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(180deg, #ffffff, #fff7e6);
+            color: #2f2419;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #6f5a42;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        /* ===== SLIDER ===== */
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(214,168,74,0.18);
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            margin-top: 40px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            text-align: center;
+            color: #7a6245;
+        }
+
+        /* future product cards */
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            width: 180px;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(214,168,74,0.12);
+            text-align: center;
+        }
+    </style>
 </head>
-<body style="font-family:Arial; background:#fff8e1; color:#5a3e1b; text-align:center;">
 
-<h1>🐝 Jewelry</h1>
-<p>Bee-inspired elegant pieces coming soon</p>
+<body>
 
-<a href="index.html">⬅ Back Home</a>
+<header>Bee Jewelry</header>
+
+<div class="container">
+
+    <div class="intro">
+        <p>
+            Welcome to Bee Jewelry<br><br>
+
+            Hello and welcome,<br>
+            I’m Chehd, founder of Bee.<br><br>
+
+            This space was created to offer a curated selection of elegant and timeless jewelry pieces designed to elevate your personal style.<br><br>
+
+            Whether you’re looking for something minimal and affordable or a more refined statement piece, you’ll find thoughtfully chosen options for every taste and budget.<br><br>
+
+            From delicate necklaces to elegant rings and classic watches, each piece is selected to add a subtle touch of beauty, confidence, and sophistication to your look.<br><br>
+
+            Take your time exploring — everything here is designed to help you discover pieces that feel like you.
+        </p>
+    </div>
+
+    <!-- ===== IMAGE SLIDER ===== -->
+    <div class="slider">
+
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed" />
+        </div>
+
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338" />
+        </div>
+
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d" />
+        </div>
+
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e" />
+        </div>
+
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1617038260897-41a1f14a8ca0" />
+        </div>
+
+    </div>
+
+    <!-- OPTIONAL SECTION 1 -->
+    <div class="section">
+        <h2>Necklaces</h2>
+        <p>Minimal and elegant everyday pieces</p>
+    </div>
+
+    <!-- OPTIONAL SECTION 2 -->
+    <div class="section">
+        <h2>Rings</h2>
+        <p>Timeless details that complete your look</p>
+    </div>
+
+    <!-- OPTIONAL SECTION 3 -->
+    <div class="section">
+        <h2>Watches</h2>
+        <p>Classic pieces with refined style</p>
+    </div>
+
+</div>
+
+<!-- SLIDER SCRIPT -->
+<script>
+    let index = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide() {
+        slides.forEach(s => s.classList.remove("active"));
+        index = (index + 1) % slides.length;
+        slides[index].classList.add("active");
+    }
+
+    setInterval(showSlide, 3000);
+</script>
 
 </body>
 </html>
