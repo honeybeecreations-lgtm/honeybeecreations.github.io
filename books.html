@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bee | Books</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(180deg, #ffffff, #f8f3e9);
+            color: #2f2419;
+        }
+
+        header {
+            text-align: center;
+            padding: 28px;
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #6f5a42;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 45px;
+        }
+
+        /* CATEGORY BLOCKS (different from other pages) */
+        .section {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #d6a84a;
+        }
+
+        .section h2 {
+            margin: 0 0 10px 0;
+        }
+
+        .section p {
+            margin: 0;
+            color: #7a6245;
+            line-height: 1.6;
+        }
+
+        /* SIMPLE GRID INSIDE SECTIONS */
+        .mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .book-box {
+            background: #f9f6f0;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            .mini-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>Bee Books</header>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <div class="intro">
+        Welcome to Books at Bee.<br><br>
+
+        This section was created with one purpose in mind — to offer you access to knowledge, inspiration, and relaxation in one curated space.<br><br>
+
+        Here you will find a selection of self-improvement books, educational reads, novels, and calming creative books designed for moments of rest and focus.<br><br>
+
+        Some books may also be paired with planners, guides, or digital tools, which you can find in our Digital Products section.<br><br>
+
+        At Bee, everything is created with intention — because we want what’s best for you.
+    </div>
+
+    <!-- EDUCATIONAL -->
+    <div class="section">
+        <h2>Educational</h2>
+        <p>Books that expand your knowledge and help you grow intellectually.</p>
+        <div class="mini-grid">
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+        </div>
+    </div>
+
+    <!-- SELF IMPROVEMENT -->
+    <div class="section">
+        <h2>Self Improvement</h2>
+        <p>Books focused on mindset, discipline, and personal growth.</p>
+        <div class="mini-grid">
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+        </div>
+    </div>
+
+    <!-- NOVELS -->
+    <div class="section">
+        <h2>Novels</h2>
+        <p>Stories for imagination, emotion, and escape.</p>
+        <div class="mini-grid">
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+        </div>
+    </div>
+
+    <!-- COLORING BOOKS -->
+    <div class="section">
+        <h2>Relaxation & Coloring</h2>
+        <p>Calming books for creativity, stress relief, and relaxation.</p>
+        <div class="mini-grid">
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+            <div class="book-box">Coming Soon</div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
