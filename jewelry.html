@@ -30,40 +30,60 @@
             text-align: center;
             color: #6f5a42;
             line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* CAROUSEL */
+        .carousel {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(214,168,74,0.18);
             margin-bottom: 40px;
         }
 
-        /* SLIDER CONTAINER */
-        .slider {
+        .slides {
             display: flex;
-            gap: 20px;
-            overflow-x: auto;
-            padding-bottom: 10px;
-            scroll-snap-type: x mandatory;
+            width: 500%;
+            height: 100%;
+            animation: slide 20s infinite;
         }
 
-        .slider::-webkit-scrollbar {
-            display: none;
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* CARD STYLE */
+        @keyframes slide {
+            0% { transform: translateX(0%); }
+            20% { transform: translateX(0%); }
+            25% { transform: translateX(-100%); }
+            45% { transform: translateX(-100%); }
+            50% { transform: translateX(-200%); }
+            70% { transform: translateX(-200%); }
+            75% { transform: translateX(-300%); }
+            90% { transform: translateX(-300%); }
+            100% { transform: translateX(-400%); }
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
         .card {
-            min-width: 280px;
-            flex: 0 0 auto;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(214,168,74,0.18);
             background: #fff;
-            scroll-snap-align: center;
-            transition: 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.03);
         }
 
         .image-box {
-            height: 320px;
+            height: 300px;
             overflow: hidden;
         }
 
@@ -80,12 +100,12 @@
             font-weight: 600;
         }
 
-        /* hint text */
-        .hint {
-            text-align: center;
-            font-size: 14px;
-            color: #8a6f50;
-            margin-bottom: 20px;
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
         }
 
     </style>
@@ -102,25 +122,30 @@
 
         Here you’ll find carefully selected pieces designed to elevate your style — from everyday elegance to timeless luxury.<br><br>
 
-        Scroll through each piece to discover rings, engagement designs, necklaces, bracelets, and diamonds curated with intention.
+        Rings, necklaces, bracelets, anklets, and piercings — each piece chosen to bring beauty and refinement into your look.
     </div>
 
-    <div class="hint">← scroll horizontally to explore →</div>
+    <!-- CAROUSEL -->
+    <div class="carousel">
+        <div class="slides">
 
-    <div class="slider">
+            <img src="rings.jpg">
+            <img src="necklace.jpg">
+            <img src="bracelet.jpg">
+            <img src="diamonds.jpg">
+            <img src="engagement.jpg">
+
+        </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="grid">
 
         <div class="card">
             <div class="image-box">
                 <img src="rings.jpg">
             </div>
             <div class="title">Rings</div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="engagement.jpg">
-            </div>
-            <div class="title">Engagement</div>
         </div>
 
         <div class="card">
@@ -141,7 +166,14 @@
             <div class="image-box">
                 <img src="diamonds.jpg">
             </div>
-            <div class="title">Diamonds</div>
+            <div class="title">Anklets</div>
+        </div>
+
+        <div class="card">
+            <div class="image-box">
+                <img src="engagement.jpg">
+            </div>
+            <div class="title">Piercings</div>
         </div>
 
     </div>
