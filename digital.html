@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bee | Digital Products</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            background: linear-gradient(180deg, #ffffff, #f8f3e9);
+            color: #2f2419;
+        }
+
+        header {
+            text-align: center;
+            padding: 28px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #6f5a42;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        /* TOOL CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #d6a84a;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .card p {
+            margin: 0;
+            color: #7a6245;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 12px;
+            padding: 5px 10px;
+            background: #f3eadb;
+            border-radius: 10px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>Bee Digital Products</header>
+
+<div class="container">
+
+    <!-- INTRO -->
+    <div class="intro">
+        Welcome to Bee Digital Products.<br><br>
+
+        This space is designed to give you access to tools that help you organize, learn, and grow.<br><br>
+
+        From planners and templates to guides, ebooks, and productivity systems — everything here is built to make your daily life simpler and more structured.
+    </div>
+
+    <!-- PRODUCTS -->
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Planners</h3>
+            <p>Daily, weekly, and monthly planners to organize your life and goals.</p>
+            <div class="tag">Productivity</div>
+        </div>
+
+        <div class="card">
+            <h3>To-Do Lists</h3>
+            <p>Simple structured checklists to help you stay focused and efficient.</p>
+            <div class="tag">Organization</div>
+        </div>
+
+        <div class="card">
+            <h3>Templates</h3>
+            <p>Ready-to-use templates for social media, business, and content creation.</p>
+            <div class="tag">Business</div>
+        </div>
+
+        <div class="card">
+            <h3>Ebooks</h3>
+            <p>Digital books focused on self-improvement, learning, and growth.</p>
+            <div class="tag">Learning</div>
+        </div>
+
+        <div class="card">
+            <h3>Habit Trackers</h3>
+            <p>Track your daily habits and build consistency over time.</p>
+            <div class="tag">Self-Improvement</div>
+        </div>
+
+        <div class="card">
+            <h3>Guides</h3>
+            <p>Step-by-step guides for productivity, mindset, and online growth.</p>
+            <div class="tag">Education</div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
