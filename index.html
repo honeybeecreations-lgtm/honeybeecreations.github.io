@@ -21,12 +21,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .bee-icon {
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
         }
 
         .tagline {
@@ -68,19 +68,29 @@
             text-decoration: none;
             border-radius: 6px;
         }
-
-        /* subtle category title style */
-        .card h3 {
-            text-decoration: none;
-            font-weight: 600;
-        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <img class="bee-icon" src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="bee">
+    <!-- Embedded bee icon (100% reliable, no external images) -->
+    <svg class="bee-icon" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <!-- wings -->
+        <ellipse cx="20" cy="22" rx="10" ry="14" fill="#d9c27a" opacity="0.7"/>
+        <ellipse cx="44" cy="22" rx="10" ry="14" fill="#d9c27a" opacity="0.7"/>
+
+        <!-- body -->
+        <ellipse cx="32" cy="36" rx="14" ry="18" fill="#c9a24a"/>
+
+        <!-- stripes -->
+        <rect x="24" y="28" width="16" height="4" fill="#2f2419"/>
+        <rect x="24" y="36" width="16" height="4" fill="#2f2419"/>
+
+        <!-- head -->
+        <circle cx="32" cy="18" r="6" fill="#2f2419"/>
+    </svg>
+
     <span>Bee</span>
 </header>
 
