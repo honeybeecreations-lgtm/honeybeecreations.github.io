@@ -18,7 +18,6 @@
             padding: 28px;
             font-size: 32px;
             font-weight: 600;
-            letter-spacing: 1px;
         }
 
         .container {
@@ -30,28 +29,37 @@
         .intro {
             text-align: center;
             color: #6f5a42;
-            font-size: 16px;
             line-height: 1.7;
             margin-bottom: 40px;
         }
 
-        /* LUXURY GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
+        /* SLIDER CONTAINER */
+        .slider {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scroll-snap-type: x mandatory;
         }
 
+        .slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* CARD STYLE */
         .card {
+            min-width: 280px;
+            flex: 0 0 auto;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: 0 10px 25px rgba(214,168,74,0.18);
             background: #fff;
+            scroll-snap-align: center;
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: scale(1.03);
         }
 
         .image-box {
@@ -72,18 +80,14 @@
             font-weight: 600;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 900px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        /* hint text */
+        .hint {
+            text-align: center;
+            font-size: 14px;
+            color: #8a6f50;
+            margin-bottom: 20px;
         }
 
-        @media (max-width: 600px) {
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
 </head>
 
@@ -96,14 +100,14 @@
     <div class="intro">
         Welcome to Bee Jewelry.<br><br>
 
-        Here you’ll find carefully selected pieces designed to elevate your style — from everyday elegance to statement luxury.<br><br>
+        Here you’ll find carefully selected pieces designed to elevate your style — from everyday elegance to timeless luxury.<br><br>
 
-        Rings, necklaces, bracelets, diamonds, and engagement pieces — each one chosen to bring timeless beauty and refinement into your look.<br><br>
-
-        Simple, elegant, and made to feel special.
+        Scroll through each piece to discover rings, engagement designs, necklaces, bracelets, and diamonds curated with intention.
     </div>
 
-    <div class="grid">
+    <div class="hint">← scroll horizontally to explore →</div>
+
+    <div class="slider">
 
         <div class="card">
             <div class="image-box">
